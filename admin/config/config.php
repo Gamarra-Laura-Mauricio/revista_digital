@@ -1,20 +1,20 @@
 <?php
+declare(strict_types=1);
+
 // Mostrar errores temporalmente para depuración
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-declare(strict_types=1);
-
 const DB_HOST = 'sql110.infinityfree.com';
 const DB_NAME = 'if0_43004905_revista_digital';
 const DB_USER = 'if0_43004905';
-const DB_PASS = 'oYPfWnoPWjLPs'; // ¡Recuerda cambiarla en el panel de InfinityFree cuando termines!
+const DB_PASS = 'oYPfWnoPWjLPs'; // ¡Cámbiala cuando termines!
 
-// URL base absoluta del panel de administración
-const BASE_URL = 'http://mauriciogamarra.ct.ws/admin';
+// URL base del panel (relativa para evitar problemas con HTTP/HTTPS)
+const BASE_URL = '/admin';
 
-// Ruta absoluta a la carpeta global de uploads en la raíz (sube 2 niveles desde admin/config/)
+// Ruta absoluta a la carpeta global de uploads en la raíz
 const UPLOAD_DIR = __DIR__ . '/../../uploads/';
 
 if (session_status() === PHP_SESSION_NONE) {
