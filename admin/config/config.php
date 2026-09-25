@@ -1,16 +1,30 @@
 <?php
+<?php
 declare(strict_types=1);
 
+// 1. CREDENCIALES DE BASE DE DATOS
 const DB_HOST = 'sql110.infinityfree.com';
 const DB_NAME = 'if0_43004905_revista_digital';
 const DB_USER = 'if0_43004905';
-const DB_PASS = 'oYPfWnoPWjLPs';
+// ¡PON AQUÍ TU NUEVA CONTRASEÑA! (Cámbiala en el panel de InfinityFree primero)
+const DB_PASS = 'oYPfWnoPWjLPs'; 
 
-// URL base del panel de administración
-const BASE_URL = '/sistema_noticias/admin';
+// 2. URL BASE CORREGIDA
+// Si tu carpeta "admin" está directamente dentro de htdocs, usa '/admin'. 
+// Si los archivos del admin están sueltos en la raíz de htdocs, déjalo vacío: ''
+const BASE_URL = '/admin'; 
 
-// Ruta absoluta a la carpeta global de uploads en la raíz (sube 2 niveles desde admin/config/)
+// 3. RUTA DE UPLOADS
+// Si config.php está en admin/config/, esto subirá 2 niveles hasta htdocs/uploads/
 const UPLOAD_DIR = __DIR__ . '/../../uploads/';
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+// ... (el resto de tu código de config.php se queda exactamente igual)
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

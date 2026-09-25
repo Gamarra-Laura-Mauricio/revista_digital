@@ -13,6 +13,12 @@ jobs:
       - name: Obtener codigo del repositorio
         uses: actions/checkout@v4
 
+      # Paso opcional pero recomendado: crear la carpeta uploads vacía para que se suba al servidor
+      - name: Preparar carpeta de subidas (uploads)
+        run: |
+          mkdir -p uploads
+          touch uploads/.gitkeep
+
       - name: Sincronizar archivos por FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
