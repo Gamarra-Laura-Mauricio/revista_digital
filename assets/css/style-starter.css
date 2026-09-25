@@ -12816,23 +12816,6 @@ form.signin-form, .map-content-5 {
         }
         .btn-outline-contacto:hover { background-color: #212529; color: #fff; }
 
-/* ==========================================================================
-   Mejoras Personalizadas y Soporte Responsive
-   ========================================================================== */
-
-/* Clases utilitarias faltantes en Bootstrap 4 para espaciados (gaps) */
-.custom-gap-2 { gap: 0.5rem; }
-.custom-gap-3 { gap: 1rem; }
-.custom-gap-4 { gap: 1.5rem; }
-.custom-g-4 { margin-right: -1.5rem; margin-left: -1.5rem; }
-.custom-g-4 > [class*="col-"] { padding-right: 1.5rem; padding-left: 1.5rem; }
-
-/* Utilidades de opacidad y transiciones */
-.custom-opacity-75 { opacity: 0.75; }
-.hover-opacity-100:hover { opacity: 1 !important; transition: opacity 0.3s ease; }
-.transition-color { transition: color 0.3s ease-in-out; }
-.hover-text-danger:hover { color: #e0020d !important; }
-.hover-text-white:hover { color: #ffffff !important; }
 
 /* =========================================================
    HEADER PRINCIPAL
